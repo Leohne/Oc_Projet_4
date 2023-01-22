@@ -4,7 +4,6 @@
     justify-content: center;
     flex-direction: column;
     margin: 0px auto;
-    max-width: 375px;
 }
 
 a {
@@ -36,10 +35,10 @@ a:visited {
 .loc {
     background: #EAEAEA;
 }
+
 .loc__city {
     display: flex;
     justify-content: center;
-    width: 90%;
 }
 
 .loc__city--row {
@@ -56,11 +55,11 @@ a:visited {
     justify-content: center;
     background: #F6F6F6;
 }
+
 .explorer__bloc {
     display: flex;
     flex-direction: column;
     align-content: center;
-    width: 80%;
 }
 
 .explorer__bloc--h1 {
@@ -72,7 +71,7 @@ a:visited {
 .explorer__bloc--p {
     text-align: center;
     margin-top: 0px;
-    padding-bottom: 10px;
+    padding: 10px;
 }
 
 .explorer__bloc--btn {
@@ -80,15 +79,22 @@ a:visited {
     justify-content: center;
     padding-bottom: 50px;
 }
+
 .btn {
     text-align: center;
     border-radius: 25px;
     border: 1px solid #FFFFFF26;
     color: white;
-    background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
-    box-shadow: 0px 4px 10px 0px #00000040;
+    background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%),
+        linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
     width: 218px;
     height: 50px;
+}
+
+
+.nav {
+    padding-bottom: 60px;
 }
 
 .nav__titre {
@@ -96,7 +102,8 @@ a:visited {
     padding-left: 10px;
 }
 
-.nav__list {
+.nav__list,
+ul {
     list-style-type: none;
     padding-left: 0;
 }
@@ -110,7 +117,9 @@ a:visited {
 .numb {
     border: 1px solid black;
     border-radius: 50%;
-    margin: 0px 50px 0px 0px;
+    margin-right: 12px;
+    margin-left: -12%;
+    padding-top: 4px;
     background: #9356DC;
     border-color: #9356DC;
     color: #FFFFFF;
@@ -120,46 +129,58 @@ a:visited {
 
 .nav__list--li {
     display: flex;
-    margin: 20px;
+    margin: 20px 25px;
     background: #F6F6F6;
     border-radius: 20px;
-    box-shadow: 0px 4px 15px #00000026;
+    box-shadow: 2px 4px 16px #00000026;
     text-align: center;
     padding: 20px;
-    width: 80%;
 }
 
-.nav__list--li:hover {
-    background: #F5EDFF;
+.nav__list--color {
+    background-color: #F5EDFF;
 }
 
 .li-icone {
     padding-right: 23px;
-    color: #7E7E7E;   
+    color: #7E7E7E;
 }
 
 .resto {
+    display: flex;
+    align-content: center;
+    flex-direction: column;
     background: #F6F6F6;
-    width: 100%;
+    padding-top: 20px;
 }
 
-.resto__titre
-
 .resto__carte {
-    margin: 0px auto;
-    width: 80%;
+    width: 99%;
+}
+
+.resto__carte--flex {
     display: flex;
-    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 40px;
+}
+
+.resto__titre {
+    padding-left: 20px;
 }
 
 .resto__carte-a {
-    width: 80%;
+    width: 90%;
+    margin: 20px 0px;
+    border-radius: 15px;
+    border: 1px solid back;
+    box-shadow: 0px 4px 15px 0px #0000001A;
 }
 
 .resto__img {
-    object-fit: fill;
+    object-fit: cover;
     height: 231px;
-    width: 80%;
+    width: 100%;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
 
@@ -167,8 +188,59 @@ a:visited {
 
 .resto__txt {
     display: flex;
-    justify-content: space-between;
-    border-radius: 25px;
+    justify-content: space-around;
     background: #FFFFFF;
-    width: 80%;
+    width: 100%;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.resto__txt--flexbox {
+    margin-left: -4%;
+}
+
+.txt-fr-carte {
+    margin-left: -10%;
+}
+
+.fa-heart {
+    font-size: x-large;
+    padding: 44px 0px 33px;
+}
+
+.fa-heart:active {
+    background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+}
+
+footer {
+    background-color: #353535;
+    color: white;
+}
+
+.footer__contain {
+    padding: 22px 25px;
+}
+
+.footer__logo {
+    filter: invert(1);
+    width: 137px;
+    height: 27px;
+}
+
+.fa-utensils,
+.fa-handshake-angle {
+    padding-right: 5px;
+}
+
+.fa-utensils {
+    padding-right: 11px;
+}
+
+.footer__ul {
+    margin: 0;
+    padding-top: 18px;
+}
+
+.footer__li {
+    padding: 5px 0px;
 }

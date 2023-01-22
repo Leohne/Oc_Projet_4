@@ -2,13 +2,14 @@
 <html>
 
 <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/a1f972932d.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="assets/css/normalize.css">
     <link rel="stylesheet" href="assets/css/style0.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
@@ -42,7 +43,7 @@
                 </div>
             </div>
         </header>
-        <nav>
+        <nav class="nav">
             <H1 class="nav__titre">Fonctionnement</H1>
             <ol class="nav__list">
                 <li class="nav__list--li">
@@ -52,11 +53,13 @@
                     </div>
                 </li>
                 <li class="nav__list--li">
+                    <div class="numb">2</div>
                     <div class="nav__list--li-contain">
                         <i class="fa-solid fa-list li-icone"></i>Composez votre menu
                     </div>
                 </li>
-                <li class="nav__list--li">
+                <li class="nav__list--li nav__list--color">
+                    <div class="numb">3</div>
                     <div class="nav__list--li-contain">
                         <i class="fa-sharp fa-solid fa-store li-icone"></i>Dégustez au restaurant
                     </div>
@@ -64,26 +67,94 @@
             </ol>
         </nav>
         <main class="resto">
-            <H1 class="resto__titre">Restaurant</H1>
-            <a class="resto__carte-a" href="#">
-                <div class="resto__carte">
-                    <img class="resto__img"
-                        src="assets/Images et textes Ohmyfood/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
-                        alt="photo menilmontant">
-                    <div class="resto__txt">
-                        <div class="resto__txt--flexbox">
-                            <h2>La palette du goût</h2>
-                            <p>Ménilmontant</p>
-                        </div>
-                        <div>
-                            <i class="fa-regular fa-heart"></i>
+            <H1 class="resto__titre">Restaurants</H1>
+            <div class="resto__carte--flex">
+                <a class="resto__carte-a" href="#">
+                    <div>
+                        <img class="resto__img"
+                            src="assets/Images et textes Ohmyfood/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+                            alt="photo menilmontant">
+                        <div class="resto__txt">
+                            <div class="resto__txt--flexbox">
+                                <h2>La palette du goût</h2>
+                                <p>Ménilmontant</p>
+                            </div>
+                            <div>
+                                <i class="fa-regular fa-heart"></i>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </a>
+                </a>
+
+                <a class="resto__carte-a" href="#">
+                    <div>
+                        <img class="resto__img"
+                            src="assets/Images et textes Ohmyfood/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg"
+                            alt="photo charonne">
+                        <div class="resto__txt">
+                            <div class="resto__txt--flexbox">
+                                <h2>La note enchantée</h2>
+                                <p>Charonne</p>
+                            </div>
+                            <div>
+                                <i class="fa-regular fa-heart"></i>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <a class="resto__carte-a" href="#">
+                    <div>
+                        <img class="resto__img"
+                            src="assets/Images et textes Ohmyfood/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
+                            alt="photo cité rouge">
+                        <div class="resto__txt">
+                            <div class="resto__txt--flexbox txt-fr-carte">
+                                <h2>A la française</h2>
+                                <p>Cité Rouge</p>
+                            </div>
+                            <div>
+                                <i class="fa-regular fa-heart"></i>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <a class="resto__carte-a" href="#">
+                    <div>
+                        <img class="resto__img"
+                            src="assets/Images et textes Ohmyfood/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
+                            alt="photo menilmontant">
+                        <div class="resto__txt">
+                            <div class="resto__txt--flexbox">
+                                <h2>Le délice des sens</h2>
+                                <p>Folie-Méricourt</p>
+                            </div>
+                            <div>
+                                <i class="fa-regular fa-heart"></i>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
         </main>
         <Footer>
-
+            <div class="footer__contain">
+                <div>
+                    <img class="footer__logo" src="/assets/Images et textes Ohmyfood/images/logo/ohmyfood@2x.svg"
+                        alt="logo Footer">
+                </div>
+                <ul class="footer__ul">
+                    <li class="footer__li">
+                        <div><i class="fa-solid fa-utensils"></i>Proposer un restaurant</div>
+                    </li>
+                    <li class="footer__li">
+                        <div><i class="fa-solid fa-handshake-angle"></i>Devenir partenaire</div>
+                    </li>
+                    <li class="footer__li">Mentions légales</li>
+                    <li class="footer__li">Contact</li>
+                </ul>
+            </div>
         </Footer>
     </div>
 </body>

@@ -1,0 +1,22 @@
+{
+  "name": "projet4",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+      "sass": "sass --watch ./sass/main.scss:./assets/css/style.css",
+      "prefix": "postcss ./assets/css/style.css -d ./assets/css/prefixed.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Leohne/Oc_Projet_4.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "browserslist": "last 4 version",
+  "bugs": {
+    "url": "https://github.com/Leohne/Oc_Projet_4/issues"
+  },
+  "homepage": "https://github.com/Leohne/Oc_Projet_4#readme"
+  
+}
