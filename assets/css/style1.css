@@ -24,6 +24,45 @@ ul {
     font-size: 154%;
 }
 
+.check {
+    background-color: #99E2D0;
+    border-radius: 0px 15px 15px 0px;
+    height: 68px;
+    padding: 0px 10px;
+    display: none;
+}
+
+.check:hover {
+
+}
+
+.fa-circle-check {
+    padding-top: 20px;
+    color: white;
+}
+
+.coeur {
+    position: relative;
+    padding: 40px 24px 33px;
+}
+
+.coeur2 {
+    position: absolute;
+    right: 25%;
+    opacity: 0;
+    color: #9356DC;
+}
+
+.fa-heart:hover {
+    transition: 500ms ;
+    opacity: 0;
+}
+
+.coeur2:hover {
+    transition: 500ms;
+    opacity: 1;
+}
+
 .logo {
     display: flex;
     justify-content: center;
@@ -88,10 +127,6 @@ ul {
     margin: 40px 0px 0px;
 }
 
-.carte__heart {
-    padding: 40px 20px 0px;
-}
-
 .carte__h2 {
     font-size: 100%;
     font-weight: 100;
@@ -99,6 +134,7 @@ ul {
     padding-top: 25px;
     padding-bottom: 6px;
     width: 40px;
+    margin-left: 15px;
 }
 
 .carte__plat {
@@ -110,6 +146,7 @@ ul {
     font-size: small;
     width: 98%;
     height: 68px;
+    margin: 15px;
 }
 
 .carte__txt {
@@ -117,8 +154,14 @@ ul {
 }
 
 .carte__prix {
-    padding-top: 48px;
-    padding-right: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-weight: 600;
+}
+
+.prix {
+    padding: 35px 25px 0px;
     font-weight: 600;
 }
 
@@ -152,21 +195,18 @@ footer {
     width: 100%;
     z-index: 2;
     position: absolute;
-    top: 1350px;
+    top: 1500px;
 }
 
 .footer__note_enchante--position {
     background-color: #353535;
     color: white;
     width: 100%;
-    z-index: 2;
-    position: absolute;
-    top: 1416px;    
+    top: 1580px;     
 }
 
 .footer__contain {
     padding: 22px 25px;
-    width: 85%;
 }
 
 .footer__logo {
@@ -207,10 +247,33 @@ footer {
 
     .carte__contain {
         justify-content: center;
-        margin: 0px 20%;
+        margin: 0px 10%;
     }    
 
     .carte__titre--flex {
         justify-content: center;
+    }
+    
+    .footer__contain {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: flex-start;
+        margin-right: 70px;
+    }
+
+    .footer__logo {
+        width: 138px;
+        height: 27px;
+    }
+
+    .footer__ul {
+        display: flex;
+        flex-direction: row;
+        padding: 0px 20px;
+    }
+
+    .footer__li {
+        padding: 5px 30px ;
+        font-size: small;
     }
 }

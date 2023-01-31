@@ -98,6 +98,10 @@ a:visited {
     cursor: pointer;
 }
 
+.btn:active {
+    background: rgba(255, 255, 255, 1);
+    color: #9356DC;
+}
 
 .nav {
     padding-bottom: 60px;
@@ -183,6 +187,7 @@ ul {
     border-radius: 15px;
     border: 1px solid back;
     box-shadow: 0px 4px 15px 0px #0000001A;
+    z-index: 0;
 }
 
 .resto__img--inblok {
@@ -224,17 +229,30 @@ ul {
     font-size: 15px;
 }
 
+.resto__carte--position {
+    position: relative;
+}
 
 .coeur {
+    position: relative;
     padding: 44px 24px 33px;
 }
 
+.coeur2 {
+    position: absolute;
+    right: 27%;
+    opacity: 0;
+    color: #9356DC;
+}
 
 .fa-heart:hover {
     transition: 1000ms ;
-    box-sizing: border-box;
-    background-color: #9356DC;
-    color: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+    opacity: 0;
+}
+
+.coeur2:hover {
+    transition: 1s;
+    opacity: 1;
 }
 
 footer {
