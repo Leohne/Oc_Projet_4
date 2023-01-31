@@ -1,0 +1,216 @@
+.contain {
+    font-family: 'Roboto';
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0px auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    color: black;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.fa-arrow-left {
+    padding: 22px 23px;
+    font-size: 154%;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    height: 63px;
+    width: 100%;
+    box-shadow: 0px 6px 10px #00000026;
+    border-bottom: 2px solid #00000026;
+}
+
+.logo__img {
+    margin: 0px auto;
+    padding-right: 40px;
+}
+
+.logo__img--size {
+    width: 162px;
+    height: 64px;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.main__img-size {
+    position: relative;
+    width: 100%;
+}
+
+.main__img {
+    object-fit: cover;
+    width: 100%;
+    height: 275px;
+}
+
+.main__carte {
+    position: absolute;
+    top: 275px;
+    width: 99.4%;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    border: 1px solid white;
+    background-color: white;
+    z-index: 1;
+}
+
+.carte__contain {
+    margin: 0px 10px;
+}
+
+.carte__titre--flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.carte__h1 {
+    font-family: "Shrikhand";
+    font-size: 170%;
+    margin: 40px 0px 0px;
+}
+
+.carte__heart {
+    padding: 40px 20px 0px;
+}
+
+.carte__h2 {
+    font-size: 100%;
+    font-weight: 100;
+    border-bottom: 3px solid #99E2D0;
+    padding-top: 25px;
+    padding-bottom: 6px;
+    width: 40px;
+}
+
+.carte__plat {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    box-shadow: 0px 4.011494159698486px 15.043103218078613px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    font-size: small;
+    width: 98%;
+    height: 68px;
+}
+
+.carte__txt {
+    padding-left: 10px;
+}
+
+.carte__prix {
+    padding-top: 48px;
+    padding-right: 20px;
+    font-weight: 600;
+}
+
+.btn {
+    text-align: center;
+    border-radius: 25px;
+    border-style: none;
+    color: white;
+    background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%),
+        linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
+    width: 218px;
+    height: 50px;
+}
+
+.btn:hover{
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
+    cursor: pointer;
+}
+
+.carte__bloc--btn {
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+}
+
+footer {
+    background-color: #353535;
+    color: white;
+    width: 100%;
+    z-index: 2;
+    position: absolute;
+    top: 1350px;
+}
+
+.footer__note_enchante--position {
+    background-color: #353535;
+    color: white;
+    width: 100%;
+    z-index: 2;
+    position: absolute;
+    top: 1416px;    
+}
+
+.footer__contain {
+    padding: 22px 25px;
+    width: 85%;
+}
+
+.footer__logo {
+    filter: invert(1);
+    width: 137px;
+    height: 27px;
+}
+
+.fa-utensils,
+.fa-handshake-angle {
+    padding-right: 5px;
+}
+
+.fa-utensils {
+    padding-right: 11px;
+}
+
+.footer__ul {
+    margin: 0;
+    padding-top: 18px;
+}
+
+.footer__li {
+    padding: 5px 0px;
+}
+
+@media screen and (min-width: 768px) {
+    
+    .main__carte {
+        margin: 0px 10%;
+        width: 80%;
+        background: rgba(246, 246, 246, 1);
+    }
+
+    .main__img {
+        object-fit: cover;
+    }
+
+    .carte__contain {
+        justify-content: center;
+        margin: 0px 20%;
+    }    
+
+    .carte__titre--flex {
+        justify-content: center;
+    }
+}
