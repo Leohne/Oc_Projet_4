@@ -24,23 +24,6 @@ ul {
     font-size: 154%;
 }
 
-.check {
-    background-color: #99E2D0;
-    border-radius: 0px 15px 15px 0px;
-    height: 68px;
-    padding: 0px 10px;
-    display: none;
-}
-
-.check:hover {
-
-}
-
-.fa-circle-check {
-    padding-top: 20px;
-    color: white;
-}
-
 .coeur {
     position: relative;
     padding: 40px 24px 33px;
@@ -48,19 +31,45 @@ ul {
 
 .coeur2 {
     position: absolute;
-    right: 25%;
+    right: 24.5%;
     opacity: 0;
-    color: #9356DC;
+    background-image: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
 }
 
 .fa-heart:hover {
-    transition: 500ms ;
+    transition: ease-in-out 250ms ;
     opacity: 0;
 }
 
 .coeur2:hover {
-    transition: 500ms;
+    transition: ease-in-out 250ms;
     opacity: 1;
+}
+
+.loader__entree {
+    animation: loader 3s;
+}
+
+.loader__plat {
+    animation-delay: 1s;
+    animation: loader 4s;
+}
+
+.loader__dessert {    
+    animation-delay: 3s;
+    animation: loader 6s;    
+}
+
+@keyframes loader {
+    from {
+        transform: translateX(150%);
+    }
+    to  {
+        transform: translateX(0);
+    }
 }
 
 .logo {
@@ -139,38 +148,94 @@ ul {
 
 .carte__plat {
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row nowrap;
     justify-content: space-between;
     box-shadow: 0px 4.011494159698486px 15.043103218078613px 0px rgba(0, 0, 0, 0.1);
     border-radius: 15px;
     font-size: small;
-    width: 98%;
-    height: 68px;
+    width: 95%;
     margin: 15px;
 }
 
 .carte__txt {
     padding-left: 10px;
+    width: 100%;    
+    overflow: hidden;
 }
 
-.carte__prix {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    font-weight: 600;
+h3 {
+    margin: 15px 5px 5px;
+}
+
+h3 + p {
+    margin: 8px 0px 0px;
+    padding-left: 6px;        
+    white-space: nowrap;    
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .prix {
-    padding: 35px 25px 0px;
+    display: flex;
+    flex-direction: row;
     font-weight: 600;
+    text-align: center;
+    overflow: hidden;
 }
+
+.prix1 {
+    padding: 30px 20px 0px;
+    margin-bottom: 10px;
+    width: 20%;
+}
+
+/*Animation carte */
+
+.fa-circle-check {
+    padding: 20px 0px 0px;
+    color: white;
+    font-size: 200%;
+}
+
+.check {
+    background-color: #99E2D0;
+    border-radius: 0px 15px 15px 0px;
+    padding: 0px 10px;
+    width: 0px;
+    opacity: 0;
+}
+
+.prix__check {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.prix:hover + .check {
+    transform-origin: 50% right;
+    animation: animation_plat 3s;
+    opacity: 0;
+}
+
+
+@keyframes animation_plat {
+    0% {
+        width: 0px;
+        opacity: 0.5;
+    }
+    100% {
+        width: 30%;
+        opacity: 1;
+    }
+}
+/*Fin animation carte*/
 
 .btn {
     text-align: center;
     border-radius: 25px;
     border-style: none;
     color: white;
-    background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%),
+    background: linear-gradient(360.64deg, #9356DC -5.2%, #FF79DA 110.74%),
         linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
     box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
     width: 218px;
@@ -178,7 +243,7 @@ ul {
 }
 
 .btn:hover{
-    background: linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), linear-gradient(360.64deg, #9356DC -5.2%, #FF79DA 110.74%);
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
     cursor: pointer;
 }
@@ -247,7 +312,7 @@ footer {
 
     .carte__contain {
         justify-content: center;
-        margin: 0px 10%;
+        margin: 0px 20%;
     }    
 
     .carte__titre--flex {

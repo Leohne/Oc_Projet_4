@@ -1,3 +1,45 @@
+.loader {
+    position: absolute;
+    z-index: -10;
+    height: 1200px;
+    width: 100%;
+    background: white;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    animation: loader 8s;
+    opacity: 0;
+}
+
+.loader_img {
+    width: 80%;
+}
+
+.loader2 {
+    display: flex;
+    justify-content: center;
+    padding-top: 400px;
+    margin: 0px auto;
+}
+
+.spinner {
+    margin: 50px auto;
+    color: #9356DC;
+}
+
+
+@keyframes loader {
+    from {
+        opacity: 1;
+        z-index: 10;
+        transition: 8s;        
+    }
+    to {
+        z-index: 10;
+        opacity: 0;
+    }
+}
+
 .contain {
     font-family: 'Roboto';
     display: flex;
@@ -85,7 +127,7 @@ a:visited {
     border-radius: 25px;
     border-style: none;
     color: white;
-    background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%),
+    background: linear-gradient(360.64deg, #9356DC -5.2%, #FF79DA 110.74%),
         linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
     box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
     width: 218px;
@@ -93,7 +135,7 @@ a:visited {
 }
 
 .btn:hover{
-    background: linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), linear-gradient(356.64deg, #9356DC -5.2%, #FF79DA 110.74%);
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
     cursor: pointer;
 }
@@ -164,8 +206,10 @@ ul {
     padding-top: 20px;
 }
 
+
 .resto__carte {
     width: 99%;
+    height: 251px;
 }
 
 .resto__carte--flex {
@@ -185,7 +229,6 @@ ul {
     width: 90%;
     margin: 20px auto;
     border-radius: 15px;
-    border: 1px solid back;
     box-shadow: 0px 4px 15px 0px #0000001A;
     z-index: 0;
 }
@@ -240,18 +283,21 @@ ul {
 
 .coeur2 {
     position: absolute;
-    right: 27%;
+    right: 28%;
     opacity: 0;
-    color: #9356DC;
+    background-image: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
 }
 
 .fa-heart:hover {
-    transition: 1000ms ;
+    transition: 250ms ;
     opacity: 0;
 }
 
 .coeur2:hover {
-    transition: 1s;
+    transition: 250ms;
     opacity: 1;
 }
 
@@ -289,7 +335,7 @@ footer {
 }
 
 @media screen and (min-width: 768px){
-
+    
     .logo__img--size {
         width: 200px;
         height: 54px;
@@ -303,19 +349,36 @@ footer {
         width: 109px;
         height: 19px;
     }
+
+    .explorer {
+        padding: 40px;
+    }
+
+    .nav {
+        padding: 40px;
+        margin-left: 12%;
+    }
     
     .nav__list {
         display: flex;
         flex-direction: row;
-        justify-content: center;
+        justify-content: flex-start;
     }
 
-    .nav {
-        margin: 0px auto;
+    .nav__list--li {
+        margin: 0px 3vw;
     }
     
+    .numb {
+        margin-left: -32px;
+    }
+
     .resto {
-        justify-content: center;
+        padding: 50px;
+    }
+    
+    .resto__bloc--margin {
+        margin-left: 11%;
     }
 
     .resto__titre {
@@ -325,7 +388,9 @@ footer {
     .resto__carte--flex {
         display: flex;
         flex-direction: row;
-        overflow: auto;
+        overflow: scroll;
+        padding-bottom: 70px;
+        margin: 0px auto;
     }
 
     .resto__carte-a {
@@ -336,10 +401,12 @@ footer {
         min-width: 340px;
     }
 
+
     .footer__contain {
         display: flex;
         flex-direction: row-reverse;
         margin-right: 50px;
+        padding: 40px;
     }
 
     .footer__ul {
