@@ -164,7 +164,10 @@ ul {
 }
 
 h3 {
-    margin: 15px 5px 5px;
+    margin: 15px 5px 5px;        
+    white-space: nowrap;    
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 h3 + p {
@@ -205,26 +208,32 @@ h3 + p {
     opacity: 0;
 }
 
-.prix__check {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
+.carte__plat:hover .carte__txt{
+    animation: animation_carte 2s ease-in-out;
 }
 
-.prix:hover + .check {
-    transform-origin: 50% right;
-    animation: animation_plat 3s;
-    opacity: 0;
-}
-
-
-@keyframes animation_plat {
+@keyframes animation_carte {
     0% {
-        width: 0px;
-        opacity: 0.5;
+        width: 100%;
     }
     100% {
-        width: 30%;
+        width: 85%;
+    }
+}
+
+.carte__plat:hover .check{
+    animation: check 2s ease-in-out;
+}
+
+
+@keyframes check {
+    0% {
+        width: 0px;
+        overflow: hidden;
+        opacity: 1;
+    }
+    100% {
+        width: 5%;
         opacity: 1;
     }
 }
@@ -235,7 +244,7 @@ h3 + p {
     border-radius: 25px;
     border-style: none;
     color: white;
-    background: linear-gradient(360.64deg, #9356DC -5.2%, #FF79DA 110.74%),
+    background: linear-gradient(350.64deg, #9356DC -5.2%, #FF79DA 110.74%),
         linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
     box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
     width: 218px;
